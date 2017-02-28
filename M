@@ -120,12 +120,12 @@ GTO M033
 CK=0EA6
 LN=526
 
-Routine MATRIX. Contains several 3×3 matrix subroutines. HP-35s supports 
-single-variable vector storage with limited operations on these vectors and 
-this is used to represent a matrix by three vectors at the bottom of the stack. 
-One matrix may be stored and recalled by public routines. For a more advanced 
-(but cumbersome) routine for N-dimensional matrices, see [Stefan Vorkoetter's 
-code](http://www.stefanv.com/calculators/hp35s_matrix_multitool.html "HP-35s 
+Routine MATRIX. Contains several 3×3 matrix subroutines. HP-35s supports
+single-variable vector storage with limited operations on these vectors and
+this is used to represent a matrix by three vectors at the bottom of the stack.
+One matrix may be stored and recalled by public routines. For a more advanced
+(but cumbersome) routine for N-dimensional matrices, see [Stefan Vorkoetter's
+code](http://www.stefanv.com/calculators/hp35s_matrix_multitool.html "HP-35s
 Matrix Multitool").
 
 Public subroutines:
@@ -133,11 +133,11 @@ M002 MATSTOR stores a matrix represented by three vectors in stack registers
                 REGZ, REGY and REGX.
 M003 MATRCL recalls the stored matrix back to the stack.
 M004 MAT-VEC multiplies the vector in REGX with the previously stored matrix.
-M005 MAT-MAT multiplies the matrix on the stack with the previously stored 
+M005 MAT-MAT multiplies the matrix on the stack with the previously stored
                 matrix.
-M006 MAT-VEC DIRECT multiplies the vector in REGX by the matrix in REGT, REGZ 
+M006 MAT-VEC DIRECT multiplies the vector in REGX by the matrix in REGT, REGZ
                 and REGY.
-                
+
 Uses memory: I, J
 Uses routines: S
 
@@ -147,3 +147,55 @@ MATSTOR2 stores a matrix from the stack into addresses 134-136.
 INIT2 initializes J for addresses 134-136.
 TRANS2 transposes the matrix stored in 134-136 into 137-139.
 MATRCL2 restores the matrix stored by MATSTOR2.
+
+Example: to calculate the matrix-vector product
+
+    [ 1 2 3 ] [ 1 ]   [ 14 ]
+    [ 4 5 6 ] [ 2 ] = [ 32 ]
+    [ 7 8 9 ] [ 3 ]   [ 50 ]
+
+type in
+
+  [1,2,3]
+  ENTER
+  [4,5,6]
+  ENTER
+  [7,8,9]
+  ENTER
+  [1,2,3]
+  XEQ M006
+
+which yields
+
+  [14,32,50]
+
+
+Example: to calculate the matrix-matrix product
+
+    [ 1 2 3 ] [ 1   2   3   ]   [ 321 642  963  ]
+    [ 4 5 6 ] [ 10  20  30  ] = [ 654 1308 1962 ]
+    [ 7 8 9 ] [ 100 200 300 ]   [ 987 1974 2961 ]
+
+type in
+
+  [1,2,3]
+  ENTER
+  [4,5,6]
+  ENTER
+  [7,8,9]
+  XEQ M002
+  [1,2,3]
+  ENTER
+  [10,20,30]
+  ENTER
+  [100,200,300]
+  XEQ M005
+
+which yields
+
+  0
+  [321,642,963]
+  [654,1308,1962]
+  [987,1974,2961]
+
+where the top two values can be seen by rolling the stack.
