@@ -1,0 +1,149 @@
+LBL M
+GTO M008
+GTO M016
+GTO M033
+GTO M088
+GTO M115
+MATSTOR
+XEQ M027
+STO(J)
+R⬇
+ISG J
+GTO M009
+R⬇
+RTN
+MATRCL
+XEQ M027
+RCL(J)
+ISG J
+GTO M017
+x<>y
+R⬇
+x<>y
+R⬆
+x<>y
+RTN
+INIT
+x<> J
+CLx
+130.132
+x<> J
+RTN
+MAT-VEC
+XEQ S001
+XEQ M027
+ENTER
+ENTER
+RCL×(J)
+R⬇
+ISG J
+GTO M037
+CLx
+[REGT,REGZ,REGY]
+STO(J)
+XEQ S011
+CLx
+133
+STO J
+CLx
+RCL(J)
+RTN
+MATSTOR2
+XEQ M055
+GTO M009
+INIT2
+x<> J
+CLx
+134.136
+x<> J
+RTN
+TRANS2
+GTO M070
+XEQ M055
+RCL(I)
+RCL(J)
+×
+ISG J
+GTO M063
+[REGX,REGY,REGZ]
+RTN
+137.139
+STO I
+[1,0,0]
+STO(I)
+XEQ M062
+STO(I)
+ISG I
+[0,1,0]
+STO(I)
+XEQ M062
+STO(I)
+ISG I
+[0,0,1]
+STO(I)
+XEQ M062
+STO(I)
+RTN
+MAT-MAT
+XEQ M052
+XEQ M061
+XEQ M027
+137.139
+STO I
+RCL(J)
+RCL×(I)
+ISG I
+GTO M093
+[REGZ,REGY,REGX]
+RCL J
+4
++
+STO I
+R⬇
+STO(I)
+ISG J
+GTO M091
+XEQ M112
+R⬆
+CLx
+R⬇
+RTN
+MATRCL2
+XEQ M055
+GTO M017
+MAT-VEC DIRECT
+R⬇
+XEQ M001
+R⬆
+GTO M033
+
+CK=0EA6
+LN=526
+
+Routine MATRIX. Contains several 3×3 matrix subroutines. HP-35s supports 
+single-variable vector storage with limited operations on these vectors and 
+this is used to represent a matrix by three vectors at the bottom of the stack. 
+One matrix may be stored and recalled by public routines. For a more advanced 
+(but cumbersome) routine for N-dimensional matrices, see [Stefan Vorkoetter's 
+code](http://www.stefanv.com/calculators/hp35s_matrix_multitool.html "HP-35s 
+Matrix Multitool").
+
+Public subroutines:
+M002 MATSTOR stores a matrix represented by three vectors in stack registers
+                REGZ, REGY and REGX.
+M003 MATRCL recalls the stored matrix back to the stack.
+M004 MAT-VEC multiplies the vector in REGX with the previously stored matrix.
+M005 MAT-MAT multiplies the matrix on the stack with the previously stored 
+                matrix.
+M006 MAT-VEC DIRECT multiplies the vector in REGX by the matrix in REGT, REGZ 
+                and REGY.
+                
+Uses memory: I, J
+Uses routines: S
+
+Private subroutines:
+INIT initilizes J for addresses 130-132.
+MATSTOR2 stores a matrix from the stack into addresses 134-136.
+INIT2 initializes J for addresses 134-136.
+TRANS2 transposes the matrix stored in 134-136 into 137-139.
+MATRCL2 restores the matrix stored by MATSTOR2.

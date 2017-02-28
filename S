@@ -1,0 +1,35 @@
+LBL S
+GTO S004
+GTO S011
+XEQ S019
+R⬇
+STO(J)
+ISG J
+GTO S005
+RTN
+RESTORE
+XEQ S019
+R⬇
+CLx
+RCL(J)
+ISG J
+GTO S012
+RTN
+INIT
+STO J
+CLx
+190.193
+x<> J
+RTN
+
+CK=2AC5
+LN=87
+
+Routine STACK. Stores and restores the entire stack.
+
+Public subroutines:
+S002 STORE stores the stack
+S003 RESTORE restores the previously stored stack.
+
+Uses memory: J
+Uses routines: none
