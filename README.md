@@ -14,15 +14,15 @@ calculator's pouch.
 
 ## Contents
 
-**S** A routine for storing and restoring the stack. Used by other
+**S** — A routine for storing and restoring the stack. Used by other
   routines to avoid clobbering intermediate results.
 
-**V** Cross product of two vectors. Unlike the example in the
+**V** — Cross product of two vectors. Unlike the example in the
   calculator's manual which requires that you enter the six vector
   components into named variables, this routine works on HP-35s's
   native vectors (i.e. the `[]` notation).
 
-**M** Matrix routines that, like **V**, work with the `[]` notation
+**M** — Matrix routines that, like **V**, work with the `[]` notation
   for vectors, making data entry more comfortable.
 
 ## Code organization
