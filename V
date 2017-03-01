@@ -1,0 +1,130 @@
+LBL V
+XEQ S001
+220.229
+STO I
+R⬇
+XEQ V041
+R⬇
+XEQ V041
+[0,0,0]
+STO I
+221
+225
+222
+224
+XEQ V060
+XEQ V080
+[REGX,0,0]
+STO+ I
+222
+223
+220
+225
+XEQ V060
+XEQ V080
+[0,REGX,0]
+STO+ I
+220
+224
+221
+223
+XEQ V060
+XEQ V080
+[0,0,REGX]
+STO+ I
+XEQ S003
+×
+CLx
+RCL I
+RTN
+COMPONENTS
+STO J
+[1,0,0]
+×
+STO(I)
+ISG I
+CLx
+RCL J
+[0,1,0]
+×
+STO(I)
+ISG I
+CLx
+RCL J
+[0,0,1]
+×
+STO(I)
+ISG I
+RTN
+INDICES
+STO J
+CLx
+226.229
+x<> J
+STO(J)
+R⬇
+ISG J
+GTO V064
+RTN
+GET2
+RCL(J)
+x<> J
+RCL(J)
+x<>y
+x<> J
+R⬇
+ISG J
+GTO V070
+RTN
+DIFFPROD
+226.227
+STO J
+XEQ V070
+×
+228.229
+STO J
+R⬇
+XEQ V070
+×
+-
+RTN
+
+CK=810E
+LN=421
+
+Routine VECTOR. Calculates the vector (i.e. cross) product of two vectors on 
+the stack. Vectors are stored in the vector notation, y×x is calculated. The 
+routine is rather long because it needs to split the two vectors into 
+components, calculate the components of the result, and assemble the result 
+back into vector form.
+
+Public subroutines:
+V001 VECTOR is the only public subroutine.
+
+Uses memory: I, J
+Uses routines: S
+
+Private subroutines:
+COMPONENTS splits a vector into its three components.
+INDICES stores the four indices on the stack into memory.
+GET2 assumes J points into the array of stored indices and returns two values 
+        stored at those indices on the stack.
+DIFFPROD calculates one component of the cross product.
+
+The main routine first uses COMPONENTS to store the components of the second 
+vector in 220-222 and components of the first vector in 223-225. It then 
+computes each component of the cross product by loading the four indices of the 
+input vectors' components onto the stack, calling INDICES to store them and 
+calling DIFFPROD to calculate the resulting component. As each component of the 
+cross product is calculated, the vector is assembled in the variable I.
+
+Example: to calculate the cross product [1, 2, 3] × [2, 2, 3], type in
+
+  [1, 2, 3]
+  ENTER
+  [2, 2, 3]
+  XEQ V001
+  
+which yields
+
+  [0,3,-2]
