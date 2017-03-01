@@ -3,9 +3,9 @@
 ## Intro
 
 Here are some of the routines that I wrote for my HP-35s calculator. I
-wrote them mostly for fun, but I think they could be useful
-inpractice. Anything more complex is probably better solved on a real
-computer, which nowadays means a phone if you want to keep it
+wrote them mostly for fun, but I think they could be useful in
+practice. Anything more complex is probably better solved on a real
+computer, which nowadays might mean a phone if you want to keep it
 portable. But a HP calculator still has a superior interface and
 battery life, so I hope you find these routines useful. Also included
 is a quick reference card for the routines and more advanced built-in
@@ -35,9 +35,9 @@ memory for storage and stack for input and output. Anonymous memory is
 organized into segments of ten addresses, each belonging to a
 routine. The first two digits of an address are the number of the
 routine's letter label. For example, routine S is assigned addresses
-from 190 to 199 (only three are actually used). This scheme leaves the
-first 10 and the last 530 addresses free. If a routine uses any other
-memory, it is documented.
+from 190 to 199 (although only three are actually used). This scheme
+leaves the first 10 and the last 530 addresses free. If a routine uses
+any other memory, it is documented.
 
 ## Authors
 
