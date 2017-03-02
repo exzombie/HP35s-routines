@@ -25,6 +25,8 @@ calculator's pouch.
 **M** — Matrix routines that, like **V**, work with the `[]` notation
   for vectors, making data entry more comfortable.
 
+**T** — Tabulate a function over the specified interval.
+
 ## Code organization
 
 Each routine is in its own file named after the letter that labels the
