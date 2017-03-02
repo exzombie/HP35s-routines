@@ -3,7 +3,7 @@
 ## Intro
 
 Here are some of the routines that I wrote for my HP-35s calculator. I
-wrote them mostly for fun, but I think they could be useful in
+wrote them mostly for fun, but I also found them useful in
 practice. Anything more complex is probably better solved on a real
 computer, which nowadays might mean a phone if you want to keep it
 portable. But a HP calculator still has a superior interface and
@@ -27,12 +27,12 @@ calculator's pouch.
 
 ## Code organization
 
-Each routine is in it's own file named after the letter that labels
-the routine. The file starts with the code so that your text editor
-can provide meaningful line numbers. Each routine consists of
-subroutines that also have meaningful labels in the form of text
-equations. These are never executed, so the value of flag 10 doesn't
-matter. They only aid the reader.
+Each routine is in its own file named after the letter that labels the
+routine. The file starts with the code so that your text editor can
+provide meaningful line numbers. Each routine consists of subroutines
+that also have meaningful labels in the form of equation text. These
+"equations" are jumped over and never executed, so the value of flag
+10 doesn't matter. They only aid the reader.
 
 After the code comes the description of the routine, how it's meant to
 be called and what the subroutines do. The "public" subroutines,
@@ -45,12 +45,13 @@ stored matrix, M004 multiplies a matrix with a vector, and so on.
 Use of named variables is mostly avoided, except for I and J of
 course. Unless too inconvenient, routines try to only use anonymous
 memory for storage and stack for input and output. Anonymous memory is
-organized into segments of ten addresses, each belonging to a
-routine. The first two digits of an address are the number of the
-routine's letter label. For example, routine S is assigned addresses
-from 190 to 199 (although only three are actually used). This scheme
-leaves the first 10 and the last 530 addresses free. If a routine uses
-any other memory, it is documented.
+organized into segments of ten addresses, each belonging to a letter
+labeling a particular routine. The first two digits of an address are
+the number of the routine's letter label. For example, routine S is
+assigned addresses from 190 to 199 (although only three are actually
+used). This scheme allocates memory for all possible labels, whether
+they are used or not, and leaves the first 10 and the last 530
+addresses free. If a routine uses any other memory, it is documented.
 
 ## Authors
 
