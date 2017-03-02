@@ -1,0 +1,86 @@
+LBL T
+GTO T005
+GTO T025
+TABULATE1
+R⬆
+x<>y
+R⬆
+STO J
+R⬆
+ENTER
+R⬇
+-
++/-
+x<>y
+÷
+x<>y
+R⬇
+R⬇
+CLx
+RCL J
+R⬆
+R⬆
+GTO T026
+TABULATE2
+999999999999
+CF 10
+REGZ
+R⬇
+x<> J
+CLx
+200.202
+x<> J
+STO(J)
+R⬇
+ISG J
+GTO T033
+GTO T054
+NEXT
+200.202
+STO J
+RCL(J)
+ISG J
+GTO T041
++
+DSE J
+ENTER
+STO(J)
+ISG J
+ENTER
+x≥y?
+GTO T064
+GTO T054
+EVAL
+STO(J)
+XEQ F001
+x<> J
+CLx
+203
+x<> J
+RCL(J)
+x<>y
+STOP
+GTO T039
+SF 10
+DONE
+CF 10
+RTN
+
+CK=42A6
+LN=264
+
+Routine TABULATE. Executes program F to evaluate it over the specified interval. 
+F must take its argument from the stack and put back its result. It must 
+not overwrite memory allocated to T, but may otherwise do anything. TABULATE 
+stops evaluation after each point, displaying the current input in the y 
+register and the current result in the x register. Resume calculation with R/S.
+
+Public subroutines:
+T002 TABULATE1 takes three values from the stack: start, stop and steps.
+T003 TABULATE2 takes two values from the stack: start and stepsize.
+
+Uses memory: J
+
+Private subroutines:
+NEXT restores the current position, calculates the next step and stops if done.
+EVAL calls F and displays both the result and the input value.
