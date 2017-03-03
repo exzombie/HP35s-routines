@@ -80,6 +80,7 @@ T002 TABULATE1 takes three values from the stack: start, stop and steps.
 T003 TABULATE2 takes two values from the stack: start and stepsize.
 
 Uses memory: J
+Uses routines: F
 
 Private subroutines:
 NEXT restores the current position, calculates the next step and stops if done.
