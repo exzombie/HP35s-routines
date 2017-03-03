@@ -27,6 +27,8 @@ calculator's pouch.
 
 **T** — Tabulate a function over the specified interval.
 
+**Q** — Solve the quadratic equation.
+
 ## Code organization
 
 Each routine is in its own file named after the letter that labels the

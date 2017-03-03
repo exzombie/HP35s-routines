@@ -1,0 +1,60 @@
+LBL Q
+4
+×
+R⬆
+×
++/-
+x<>y
+ENTER
++/-
+R⬇
+x²
++
+XEQ Q034
+x<>y
+2
+×
+ENTER
+R⬇
+÷
+R⬇
+÷
+1/x
+x<>y
+R⬇
+ENTER
+R⬇
+x<>y
+-
+R⬇
++
+R⬆
+RTN
+SQRT
+0
+x>y?
+GTO Q040
+R⬇
+√x
+RTN
+R⬇
++/-
+√x
+0i1
+×
+RTN
+
+CK=0D97
+LN=145
+
+Routine QUADRATIC. Solves the quadratic eqaution ax²+bx+c=0. Push a, b and c 
+onto the stack and call Q, it returns both solutions on the stack.
+
+Public subroutines:
+Q001 QUADRATIC is the only public subroutine.
+
+Uses memory: none
+Uses routines: none
+
+Private subroutines:
+SQRT calculates √x taking into account the complex case.
