@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="132.3317"
-     inkscape:cy="257.8808"
+     inkscape:cx="40.155281"
+     inkscape:cy="237.67775"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -73,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -168,13 +168,20 @@
            x="7.6785717"
            y="56.07423"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:11.33858299px;font-family:Gentium;-inkscape-font-specification:'Gentium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-         id="flowPara5045">V: vector cross product; load two vectors on stack,</flowPara><flowPara
+         id="flowPara5045">Flags:</flowPara><flowPara
+         id="flowPara4657">	0-4: user-defined. 5: interrupt on overflow. 6: is set on</flowPara><flowPara
+         id="flowPara4661">	overflow. 7: fraction display. 8: denominator as factor</flowPara><flowPara
+         id="flowPara4663">	of /c. 9: reduce fractions. 10: display equations instead</flowPara><flowPara
+         id="flowPara4665">	of evaulating. 11: prompt for variables when evaluating</flowPara><flowPara
+         id="flowPara4667">	equations.</flowPara><flowPara
+         id="flowPara4651" /><flowPara
+         id="flowPara4653">V: vector cross product; load two vectors on stack,</flowPara><flowPara
          id="flowPara5219">	computes <flowSpan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
    id="flowSpan5195">y</flowSpan>×<flowSpan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
    id="flowSpan5197">x</flowSpan>.</flowPara><flowPara
-         id="flowPara5047"></flowPara><flowPara
+         id="flowPara5047" /><flowPara
          id="flowPara5049">M: matrices as triples of row vectors.</flowPara><flowPara
          id="flowPara5051">M002: store a matrix.</flowPara><flowPara
          id="flowPara5053">M003: recall a stored matrix.</flowPara><flowPara
@@ -189,7 +196,7 @@
    id="flowSpan5203">x</flowSpan>, A a matrix on stack, <flowSpan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
    id="flowSpan5205">x</flowSpan> a vector on stack.</flowPara><flowPara
-         id="flowPara5061"></flowPara><flowPara
+         id="flowPara5061" /><flowPara
          id="flowPara5063">T: tabulate program F which takes a number from the</flowPara><flowPara
          id="flowPara5065">	stack and returns result on the stack. Execution is </flowPara><flowPara
          id="flowPara5187">	paused on every step, current position and value </flowPara><flowPara
