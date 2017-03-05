@@ -31,21 +31,18 @@ R⬇
 R⬆
 RTN
 SQRT
-0
-x>y?
-GTO Q040
-R⬇
+x<0?
+GTO Q038
 √x
 RTN
-R⬇
 +/-
 √x
 0i1
 ×
 RTN
 
-CK=0D97
-LN=145
+CK=9BA8
+LN=135
 
 Routine QUADRATIC. Solves the quadratic eqaution ax²+bx+c=0. Push a, b and c 
 onto the stack and call Q, it returns both solutions on the stack.
