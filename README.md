@@ -29,6 +29,8 @@ calculator's pouch.
 
 **Q** — Solve the quadratic equation.
 
+**C** — Solve the cubic equation.
+
 ## Code organization
 
 Each routine is in its own file named after the letter that labels the

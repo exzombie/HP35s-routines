@@ -1,0 +1,192 @@
+LBL C
+x<> J
+CLx
+30.033
+x<> J
+R⬆
+STO(J)
+ISG J
+GTO C006
+R⬇
+x<>y
+GTO C014
+DELTA0
+x²
+R⬇
+×
+3
+×
+R⬆
+-
++/-
+34
+STO J
+x<>y
+STO(J)
+GTO C028
+DELTA1
+30.037
+STO J
+RCL(J)
+x²
+27
+×
+RCL(J)
+-9
+×
+ISG J
+RCL(J)
+×
+RCL(J)
+3
+yˣ
+2
+×
+ISG J
+x<>y
+RCL(J)
+×
+ISG J
+RCL(J)
+R⬆
+×
++
++
+ISG J
+ISG J
+STO(J)
+GTO C060
+CALCC
+x²
+1
+STO- J
+CLx
+RCL(J)
+3
+yˣ
+4
+×
+-
+1i0
+×
+0.5
+yˣ
+ISG J
+RCL(J)
+SGN
+×
+RCL(J)
++
+2
+÷
+0 1/3
+yˣ
+ISG J
+STO(J)
+GTO C116
+A ROOT
+36
+STO J
+CLx
+RCL(J)
+×
+ENTER
+ENTER
+34
+STO J
+CLx
+RCL(J)
+x<>y
+÷
++
+31
+STO J
+CLx
+RCL(J)
++
+1
+STO- J
+CLx
+RCL(J)
+÷
+-3
+÷
+RTN
+ROOTS
+3
+√x
+0i0.5
+×
+0.5
+-
+37
+STO J
+R⬇
+STO(J)
+2
+yˣ
+XEQ C088
+XEQ C153
+37
+STO J
+R⬇
+x<>(J)
+XEQ C088
+XEQ C153
+38
+STO J
+R⬇
+STO(J)
+1
+XEQ C088
+XEQ C153
+RCL(J)
+37
+STO J
+CLx
+RCL(J)
+R⬇
+CLx
+R⬇
+RTN
+CHKREAL
+ENTER
+ARG
+SIN
+ABS
+1e-10
+x>y?
+GTO C163
+R⬇
+R⬇
+RTN
+R⬇
+R⬇
+ENTER
+ABS
+x<>y
+ARG
+COS
+×
+RTN
+
+CK=76B6
+LN=617
+
+Routine CUBIC. Solves the cubic equation ax³+bx²+cx+d=0. Push a, b, c and d onto
+the stack and call C, it returns all three solutions on the stack. 
+See: https://en.wikipedia.org/wiki/Cubic_function#Algebraic_solution
+
+Public subroutines:
+C001 CUBIC is the only public subroutine.
+
+Uses memory: none
+Uses routines: none
+
+Private subroutines:
+DELTA0 computes the Δ₀ coefficient.
+DELTA1 computes the Δ₁ coefficient.
+CALCC computes the C coefficent.
+A ROOT computes a single root given its ξ value.
+ROOTS gives the three ξ values to A ROOT and tests results with CHKREAL.
+CHKREAL check if the imaginary component is small, and if so, removes it.
