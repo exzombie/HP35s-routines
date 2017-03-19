@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="129.70038"
-     inkscape:cy="177.0686"
+     inkscape:cx="92.577274"
+     inkscape:cy="213.43409"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -191,11 +191,8 @@
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
    id="flowSpan5201">x</flowSpan> a vector on stack.</flowPara><flowPara
          id="flowPara5057">M005: M·A, M a stored matrix, A matrix on stack.</flowPara><flowPara
-         id="flowPara5059">M006: A·<flowSpan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
-   id="flowSpan5203">x</flowSpan>, A a matrix on stack, <flowSpan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:'Gentium Italic'"
-   id="flowSpan5205">x</flowSpan> a vector on stack.</flowPara><flowPara
+         id="flowPara4650">M006: determinant of stored matrix M.</flowPara><flowPara
+         id="flowPara4656">M007: eigenvalues of stored matrix M.</flowPara><flowPara
          id="flowPara5061" /><flowPara
          id="flowPara5063">T: tabulate program F which takes a number from the</flowPara><flowPara
          id="flowPara5065">	stack and returns result on the stack. Execution is </flowPara><flowPara
