@@ -317,7 +317,7 @@ M006 DETER computes the determinant of the previously stored matrix.
 M007 EIGEN computes the three eigenvalues of the previously stored matrix.
 
 Uses memory: I, J
-Uses routines: S
+Uses routines: S, C
 
 Private subroutines:
 INIT initilizes J for addresses 130-132.
