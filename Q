@@ -30,7 +30,7 @@ R⬇
 +
 R⬆
 RTN
-SQRT
+SQRT CK=F5B5
 x<0?
 GTO Q038
 √x

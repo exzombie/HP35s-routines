@@ -38,7 +38,8 @@ routine. The file starts with the code so that your text editor can
 provide meaningful line numbers. Each routine consists of subroutines
 that also have meaningful labels in the form of equation text. These
 "equations" are jumped over and never executed, so the value of flag
-10 doesn't matter. They only aid the reader.
+10 doesn't matter. They only aid the reader. Since they may be
+misinterpreted as instructions, they are labeled with their checksums.
 
 After the code comes the description of the routine, how it's meant to
 be called and what the subroutines do. The "public" subroutines,
