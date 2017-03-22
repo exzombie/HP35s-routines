@@ -180,7 +180,7 @@ See: https://en.wikipedia.org/wiki/Cubic_function#Algebraic_solution
 Public subroutines:
 C001 CUBIC is the only public subroutine.
 
-Uses memory: none
+Uses memory: J
 Uses routines: none
 
 Private subroutines:
