@@ -342,9 +342,9 @@ type in
   [4,5,6]
   ENTER
   [7,8,9]
-  ENTER
+  XEQ M
   [1,2,3]
-  XEQ M006
+  XEQ M004
 
 which yields
 
@@ -364,7 +364,7 @@ type in
   [4,5,6]
   ENTER
   [7,8,9]
-  XEQ M002
+  XEQ M
   [1,2,3]
   ENTER
   [10,20,30]
