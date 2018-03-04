@@ -64,7 +64,7 @@ addresses free. If a routine uses any other memory, it is documented.
 
 Unless otherwise noted in a particular file, the following applies.
 
-Copyright 2017 Jure Varlec <jure@varlec.si>
+Copyright 2017-2018 Jure Varlec <jure@varlec.si>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

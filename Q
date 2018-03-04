@@ -18,8 +18,8 @@ ENTER
 R⬇
 ÷
 R⬇
+x<>y
 ÷
-1/x
 x<>y
 R⬇
 ENTER
@@ -41,7 +41,7 @@ RTN
 ×
 RTN
 
-CK=9BA8
+CK=42F7
 LN=135
 
 Routine QUADRATIC. Solves the quadratic eqaution ax²+bx+c=0. Push a, b and c 
